@@ -7,22 +7,23 @@ package main
 import (
 	"log"
 
-	"github.com/btcsuite/btcrpcclient"
+	"github.com/conseweb/stcrpcclient"
 )
 
 func main() {
 	// Connect to local bitcoin core RPC server using HTTP POST mode.
-	connCfg := &btcrpcclient.ConnConfig{
-		Host:         "localhost:8332",
-		User:         "yourrpcuser",
-		Pass:         "yourrpcpass",
+	connCfg := &stcrpcclient.ConnConfig{
+		Host:         "localhost:8334",
+		User:         "rpcuser",
+		Pass:         "rpcpass",
 		HTTPPostMode: true, // Bitcoin core only supports HTTP POST mode
 		DisableTLS:   true, // Bitcoin core does not provide TLS by default
 	}
 	// Notice the notification parameter is nil since notifications are
 	// not supported in HTTP POST mode.
-	client, err := btcrpcclient.New(connCfg, nil)
+	client, err := stcrpcclient.New(connCfg, nil)
 	if err != nil {
+		log.Printf("Error to connect: ")
 		log.Fatal(err)
 	}
 	defer client.Shutdown()

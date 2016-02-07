@@ -2,13 +2,13 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-package btcrpcclient
+package stcrpcclient
 
 import (
 	"errors"
 	"io"
 
-	"github.com/btcsuite/btclog"
+	"github.com/conseweb/btclog"
 )
 
 // log is a logger that is initialized with no output filters.  This

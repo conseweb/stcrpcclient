@@ -3,14 +3,14 @@
 // license that can be found in the LICENSE file.
 
 /*
-Package btcrpcclient implements a websocket-enabled Bitcoin JSON-RPC client.
+Package stcrpcclient implements a websocket-enabled Bitcoin JSON-RPC client.
 
 Overview
 
 This client provides a robust and easy to use client for interfacing with a
 Bitcoin RPC server that uses a btcd/bitcoin core compatible Bitcoin JSON-RPC
-API.  This client has been tested with btcd (https://github.com/btcsuite/btcd),
-btcwallet (https://github.com/btcsuite/btcwallet), and
+API.  This client has been tested with btcd (https://github.com/conseweb/stcd),
+btcwallet (https://github.com/conseweb/btcwallet), and
 bitcoin core (https://github.com/bitcoin).
 
 In addition to the compatible standard HTTP POST JSON-RPC API, btcd and
@@ -175,4 +175,4 @@ The following full-blown client examples are in the examples directory:
    for notifications about changes to account balances, and gets a list of
    unspent transaction outputs (utxos) the wallet can sign
 */
-package btcrpcclient
+package stcrpcclient
